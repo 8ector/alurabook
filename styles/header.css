@@ -1,0 +1,214 @@
+.cabeçalho_menu{
+
+    width: 24px;
+    height: 24px;
+    background-image: url("../image/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+
+
+.cabeçalho{
+
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+    /* "position: relative"libera opções de posição "cima,baixo,direita,esquerda" */
+}
+
+
+.container{
+
+    display: flex;
+    align-items: center;
+}
+
+.lista-menu{
+
+    display: none;
+    position: absolute;
+    /* "position: absolute" neste caso permite mover ".lista-menu" em relação ao cabeçalho, que foi inserido "position:relative" */
+    Top: 100%;
+    /* "Top:100%" cria um espaçamento de 100% entre o ".lista-menu" e o "cabeçalho"......Se fosse top:50% ".lista-menu" ficaria na metade do cabeçalho*/
+    width: 70vw;
+}
+
+.container_img{
+
+    padding: 0.5em;
+}
+
+/* (Se "containe.btn" for clicado "checked on" então"~" "lista-menu" irá aparecer) */
+.container_btn:checked~.lista-menu{
+    display: block;
+    width: 40vw;
+
+}
+
+.lista-menu_titulo, .lista-menu_item{
+
+    padding: 1em;
+    background-color: var(--branco);
+ 
+    
+    
+  
+}
+
+.lista-menu_titulo{
+
+    color:var(--c5-laranja);
+    font-weight: bolder;
+    font-weight: 700;
+
+}
+
+.lista-menu_item a{
+
+    color: var(--c5-azul);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.container_btn{
+
+    display: none;
+}
+
+.container_titulo{
+    display: none;
+
+}
+
+.opcoes{
+
+    display: none;
+
+
+}
+
+.container_texto{
+
+    display: none;
+}
+
+.container_btn:checked ~ .container_rotulo > .cabeçalho_menu {
+
+    background-image: url("../image/Menu\ Aberto.svg");
+}
+
+.container_btn:checked ~.container_rotulo {
+
+    background:linear-gradient( 97.54deg,#002F52 35.49%,#326589 165.37% );
+}
+
+
+
+
+
+@media screen and (min-width: 800px){
+
+    .container_titulo, .container_titulo-negrito
+    {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+
+    .container_titulo
+    {
+        font-weight: 400;
+        display: block;
+    }
+
+    .container_titulo-negrito
+    {
+        font-weight: 700;
+    }
+
+    .opcoes{
+
+        display: flex;
+    }
+
+    .opcoes_item{
+
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opcoes_link {
+        text-decoration: none;
+        color: var(--preto);
+
+    }
+
+    .container_img_transparente{
+        display: 	none;
+    
+    }    
+
+    .cabeçalho_menu{
+
+        display: none;
+    }
+
+    .opcao_btn:checked~.lista-menu{
+        display: block;
+        width: auto;
+    
+    }
+
+    .opcao_btn{
+
+        display: none;
+    }
+
+    .opcao_btn:checked ~ .opcoes_rotulo > .opcoes_item {
+
+        background:linear-gradient( 97.54deg,#002F52 35.49%,#326589 165.37% );
+        color: var(--c5-laranja);
+
+    }
+
+    .opcoes_item{
+
+        padding: 2em 1em;
+    }
+    
+    .lista-menu_item:hover {
+
+        background: var(--c5-laranja);
+    }
+}
+
+@media screen and (min-width: 1728px) {
+
+    .container_link {
+
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        color: var(--preto);
+        font-size: 20px;
+    }
+    
+    .cabeçalho{
+
+        padding: 0 2em;
+    }
+ 
+    .opcoes{
+
+        margin-right: auto;
+
+
+    }
+
+    .container_texto{
+        display: block;
+    }
+}

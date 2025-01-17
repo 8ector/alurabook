@@ -1,0 +1,88 @@
+.contato{
+    background: var(--branco);
+    padding: 1em;
+    
+}
+
+.contato_titulo, .contato_texto{
+
+    /* Técnica utiliza para deixar palavras com cores em degrade */
+
+    background:linear-gradient(45deg, red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+
+}
+
+.contato_titulo{
+
+    font-size: 18px;
+    font-weight: 700;
+    
+}
+
+.contato_texto{
+
+    margin: 1em 0;
+    font-weight: 300;
+}
+
+
+.contato_cadastro{
+    padding: 1em;
+    border-radius: 24px;
+    border: 2px solid var(--c5-azul);
+    width: 90%;
+    
+   
+    
+    
+
+}
+
+.contato_cadastro::placeholder{
+font-family: --fonte-principal;
+color: blue;
+font-weight: 500;
+background: url(../image/Email.svg) no-repeat;
+font-size: 18px;
+padding-left: 2em;
+background-position: 0.5em;
+
+
+
+}
+
+@media screen and (min-width: 1024px) {
+    .contato{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contato_descricao {
+            margin-right: 1em;
+            width: 30%;
+    }
+
+    .contato_titulo {
+        font-size: 24px;
+
+    }
+
+    .contato_cadastro {
+        width: 40%;
+    }
+    
+}
+
+@media screen and (min-width: 1728px) {
+
+    .contato {
+
+        padding: 1em 20vw;
+    }
+    
+}
